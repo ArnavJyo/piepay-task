@@ -38,7 +38,6 @@ The server will start at `http://127.0.0.1:5000/`.
 - **Database:** SQLite is used for easy local development and zero setup. SQLAlchemy ORM provides flexibility for future migrations.
 - **Schema:** The `Offer` model stores all relevant fields as strings (comma-separated for lists) for simplicity. This makes parsing and querying easy for the assignment scope.
 - **Parsing:** Discount logic is based on regular expressions to extract percentage, flat, and minimum value conditions from the offer summary.
-- **Extensibility:** The code is modular and can be extended to support more complex offer logic or additional fields.
 
 ## 4. Scaling the GET /highest-discount Endpoint
 - **Current State:** The endpoint queries the SQLite database and parses summaries in Python. This is sufficient for low traffic.
