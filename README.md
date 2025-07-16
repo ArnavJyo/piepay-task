@@ -76,3 +76,50 @@ curl "http://127.0.0.1:5000/highest-discount?amountToPay=10000&bankName=IDFC&pay
 ```sh
 curl http://127.0.0.1:5000/all-offers
 ```
+
+## Test Cases:
+# GET /highest-discount
+
+1. Request: "http://127.0.0.1:5000/highest-discount?amountToPay=10000&bankName=&paymentInstrument=UPI_COLLECT" 
+Response:
+{
+  "highestDiscountAmount": 10
+}
+
+2. Request: "http://127.0.0.1:5000/highest-discount?amountToPay=10000&bankName=IDFC&paymentInstrument=UPI_COLLECT"
+Response:
+{
+  "highestDiscountAmount": 0
+}
+
+3. Request :"http://127.0.0.1:5000/highest-discount?amountToPay=10000&bankName=IDFC&paymentInstrument=CREDIT"
+Response: 
+{
+  "highestDiscountAmount": 500
+}
+
+4. Request :"http://127.0.0.1:5000/highest-discount?amountToPay=10000&bankName=BAJAJFINSERV&paymentInstrument=EMI_OPTIONS"
+Response:
+{
+  "highestDiscountAmount": 0
+}
+5. Request : "http://127.0.0.1:5000/highest-discount?amountToPay=10000&bankName=&paymentInstrument=EMI_OPTIONS"
+   Response
+{
+  "highestDiscountAmount": 0
+}
+6.Request :"http://127.0.0.1:5000/highest-discount?amountToPay=1000&bankName=IDFC&paymentInstrument=CREDIT"
+Response:
+{
+  "highestDiscountAmount": 0
+}
+
+7. Request : "http://127.0.0.1:5000/highest-discount?amountToPay=100&bankName=&paymentInstrument=UPI_COLLECT"
+   Response:            
+{
+  "highestDiscountAmount": 0
+}
+
+
+
+
