@@ -1,0 +1,438 @@
+{
+    "response_status": "SUCCESS",
+    "messages": [],
+    "notify_messages": [
+        {
+            "title": "Please ensure your card can be used for online transactions. ",
+            "type": "TEXT"
+        },
+        {
+            "title": "Know More",
+            "type": "OVERLAY_LINK",
+            "url": "/api/v1/info/rbi"
+        }
+    ],
+    "response_type": "PAYMENT_OPTIONS",
+    "token_version": "v3",
+    "disable_pay_button": false,
+    "disable_pay_timeout": 0,
+    "options": [
+        {
+            "applicable": true,
+            "selected": true,
+            "payment_instrument": "UPI",
+            "display_text": "UPI",
+            "messages": [
+                {
+                    "type": "INFO",
+                    "message": "Pay by any UPI app"
+                }
+            ],
+            "status_code": "",
+            "section": "OTHERS",
+            "priority": 0,
+            "provider": "FLIPKART",
+            "information": {
+                "logo_urls": {
+                    "primary": "https://static-assets-web.flixcart.com/fk-p-linchpin-web/batman-returns/logos/UPI.gif"
+                }
+            }
+        },
+        {
+            "applicable": true,
+            "selected": false,
+            "payment_instrument": "CREDIT",
+            "display_text": "Credit / Debit / ATM Card",
+            "messages": [
+                {
+                    "type": "INFO",
+                    "message": "Add and secure cards as per RBI guidelines"
+                }
+            ],
+            "status_code": "",
+            "section": "OTHERS",
+            "priority": 1,
+            "provider": "FLIPKART",
+            "information": {}
+        },
+        {
+            "applicable": true,
+            "selected": false,
+            "payment_instrument": "NET_OPTIONS",
+            "display_text": "Net Banking",
+            "messages": [
+                {
+                    "type": "INFO",
+                    "message": "This instrument has low success, use UPI or cards for better experience"
+                }
+            ],
+            "status_code": "",
+            "section": "OTHERS",
+            "priority": 2,
+            "provider": "FLIPKART",
+            "information": {}
+        },
+        {
+            "applicable": true,
+            "selected": false,
+            "payment_instrument": "EMI_OPTIONS",
+            "display_text": "EMI (Easy Installments)",
+            "messages": [],
+            "status_code": "",
+            "section": "OTHERS",
+            "priority": 3,
+            "provider": "FLIPKART",
+            "information": {}
+        },
+        {
+            "applicable": true,
+            "selected": false,
+            "payment_instrument": "COD",
+            "display_text": "Cash on Delivery",
+            "messages": [
+                {
+                    "type": "INTENT_WARNING",
+                    "message": "A ₹10 non-refundable fee is charged to help cover handling costs for cash on delivery orders."
+                }
+            ],
+            "status_code": "",
+            "status_message": "",
+            "section": "OTHERS",
+            "priority": 4,
+            "information": {},
+            "callout": {}
+        },
+        {
+            "applicable": true,
+            "selected": false,
+            "payment_instrument": "EGV",
+            "display_text": "Gift Card",
+            "messages": [],
+            "status_code": "",
+            "status_message": "",
+            "section": "NEW_VOUCHERS",
+            "priority": 5,
+            "information": {},
+            "redeemed": 0,
+            "egv_payments": []
+        }
+    ],
+    "price_summary": {
+        "remaining": 948900,
+        "base_price": 948900,
+        "item_count": 1,
+        "convertible_amount": [],
+        "price_details": [
+            {
+                "key": "PRICE",
+                "value": 948900,
+                "item_count": 1,
+                "convertible_amount": []
+            }
+        ],
+        "breakup": [
+            {
+                "key": "packaging_charges",
+                "display_text": "Packaging Charges",
+                "value": 0,
+                "type": "DEFAULT"
+            },
+            {
+                "key": "pickup_charges",
+                "display_text": "Pickup Charges",
+                "value": 0,
+                "type": "DEFAULT"
+            }
+        ],
+        "you_pay": [
+            {
+                "key": "AMOUNT_PAYABLE",
+                "value": 948900,
+                "item_count": 0,
+                "convertible_amount": []
+            }
+        ],
+        "notify_messages": []
+    },
+    "sla_summary": {
+        "prepaid": 1752683625320,
+        "postpaid": 1752683625320
+    },
+    "reservation_details": [
+        {
+            "reservationStatus": "RESERVED",
+            "presentTs": 1752683625320,
+            "ttl": 1752684404991,
+            "message": "You have time till July 16,2025,10:16:44 PM to complete your order."
+        }
+    ],
+    "reservation_expiry_action": {
+        "url": "https://2.rome.api.flipkart.com/api/3/checkout/pgCancelResponse/desktop?redirect_domain=https://www.flipkart.com&callback=true",
+        "target": "https://2.rome.api.flipkart.com/api/3/checkout/pgCancelResponse/desktop?redirect_domain=https://www.flipkart.com&callback=true",
+        "action_type": "EXTERNAL_REDIRECTION",
+        "http_method": "POST",
+        "parameters": {
+            "reason_code": "RESERVATION_EXPIRED",
+            "merchant_transaction_id": "OD4349538866826361-TX-00",
+            "transaction_status": "FAILED"
+        }
+    },
+    "back_action": {
+        "url": "https://2.rome.api.flipkart.com/api/3/checkout/pgCancelResponse/desktop?redirect_domain=https://www.flipkart.com&callback=true",
+        "target": "https://2.rome.api.flipkart.com/api/3/checkout/pgCancelResponse/desktop?redirect_domain=https://www.flipkart.com&callback=true",
+        "action_type": "EXTERNAL_REDIRECTION",
+        "http_method": "POST",
+        "parameters": {
+            "reason_code": "CANCELLED_BY_USER",
+            "merchant_transaction_id": "OD4349538866826361-TX-00",
+            "transaction_status": "FAILED"
+        }
+    },
+    "offer_banners": [
+        {
+            "adjustment_sub_type": "NBFC_ZERO_INTEREST",
+            "adjustment_id": "FPO250623124446V4JXT",
+            "summary": "No Cost EMI on Bajaj Finserv EMI Card",
+            "contributors": {
+                "payment_instrument": [
+                    "EMI_OPTIONS"
+                ],
+                "banks": [
+                    "BAJAJFINSERV"
+                ],
+                "emi_months": [
+                    "3"
+                ],
+                "card_networks": []
+            },
+            "display_tags": [
+                "PAYMENT_OPTIONS"
+            ],
+            "image": "https://static-assets-web.flixcart.com/apex-static/images/payments/banks/BFL_V2.svg",
+            "type": {
+                "value": "non-collapsable"
+            }
+        },
+        {
+            "adjustment_sub_type": "PBO",
+            "adjustment_id": "FPO250626172916JI4VZ",
+            "summary": "Flat ₹10 Cashback on Paytm UPI Trxns. Min Order Value ₹500. Valid once per Paytm account",
+            "contributors": {
+                "payment_instrument": [
+                    "UPI_COLLECT",
+                    "UPI_INTENT"
+                ],
+                "banks": [],
+                "emi_months": [
+                    "0"
+                ],
+                "card_networks": []
+            },
+            "display_tags": [
+                "PAYMENT_OPTIONS"
+            ],
+            "image": "https://rukminim1.flixcart.com/www/64/64/promos/02/06/2022/a89d0cb0-9155-4545-bd47-c5c53c8d50b7.png",
+            "type": {
+                "value": "non-collapsable"
+            }
+        },
+        {
+            "adjustment_sub_type": "PBO",
+            "adjustment_id": "FPO250626182451RYQC7",
+            "summary": "5% off up to ₹750 on IDFC FIRST Power Women Platinum and Signature DebitCards. Min Txn Value: ₹5,000",
+            "contributors": {
+                "payment_instrument": [
+                    "CREDIT"
+                ],
+                "banks": [
+                    "IDFC"
+                ],
+                "emi_months": [
+                    "0"
+                ],
+                "card_networks": []
+            },
+            "display_tags": [
+                "PAYMENT_OPTIONS"
+            ],
+            "image": "https://rukminim1.flixcart.com/www/128/128/promos/01/09/2023/c00c8f1e-1ae7-49d1-b7e5-0e2df3d11ef7.png?q=100",
+            "type": {
+                "value": "non-collapsable"
+            }
+        },
+        {
+            "adjustment_sub_type": "PBO",
+            "adjustment_id": "FPO250619134128USHPF",
+            "summary": "5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarter",
+            "contributors": {
+                "payment_instrument": [
+                    "CREDIT"
+                ],
+                "banks": [
+                    "FLIPKARTAXISBANK"
+                ],
+                "emi_months": [
+                    "0"
+                ],
+                "card_networks": []
+            },
+            "display_tags": [
+                "PAYMENT_OPTIONS"
+            ],
+            "image": "https://img1a.flixcart.com/www/linchpin/fk-cp-pay/axis-78501b36.svg",
+            "type": {
+                "value": "non-collapsable"
+            }
+        },
+        {
+            "adjustment_sub_type": "PBO",
+            "adjustment_id": "FPO250619135528ZQIZW",
+            "summary": "5% cashback on Axis Bank Flipkart Debit Card up to ₹750",
+            "contributors": {
+                "payment_instrument": [
+                    "CREDIT"
+                ],
+                "banks": [
+                    "FLIPKARTAXISBANK"
+                ],
+                "emi_months": [
+                    "0"
+                ],
+                "card_networks": []
+            },
+            "display_tags": [
+                "PAYMENT_OPTIONS"
+            ],
+            "image": "https://img1a.flixcart.com/www/linchpin/fk-cp-pay/axis-78501b36.svg",
+            "type": {
+                "value": "non-collapsable"
+            }
+        }
+    ],
+    "offer_sections": {
+        "PBO": {
+            "title": "Partner offers",
+            "offers": [
+                {
+                    "adjustment_type": "CASHBACK_ON_CARD",
+                    "adjustment_id": "FPO250626172916JI4VZ",
+                    "summary": "Flat ₹10 Cashback on Paytm UPI Trxns. Min Order Value ₹500. Valid once per Paytm account",
+                    "contributors": {
+                        "payment_instrument": [
+                            "UPI_COLLECT",
+                            "UPI_INTENT"
+                        ],
+                        "banks": [],
+                        "emi_months": [
+                            "0"
+                        ],
+                        "card_networks": []
+                    },
+                    "display_tags": [
+                        "PAYMENT_OPTIONS"
+                    ],
+                    "image": "https://rukminim1.flixcart.com/www/64/64/promos/02/06/2022/a89d0cb0-9155-4545-bd47-c5c53c8d50b7.png"
+                },
+                {
+                    "adjustment_type": "INSTANT_DISCOUNT",
+                    "adjustment_id": "FPO250626182451RYQC7",
+                    "summary": "5% off up to ₹750 on IDFC FIRST Power Women Platinum and Signature DebitCards. Min Txn Value: ₹5,000",
+                    "contributors": {
+                        "payment_instrument": [
+                            "CREDIT"
+                        ],
+                        "banks": [
+                            "IDFC"
+                        ],
+                        "emi_months": [
+                            "0"
+                        ],
+                        "card_networks": []
+                    },
+                    "display_tags": [
+                        "PAYMENT_OPTIONS"
+                    ],
+                    "image": "https://rukminim1.flixcart.com/www/128/128/promos/01/09/2023/c00c8f1e-1ae7-49d1-b7e5-0e2df3d11ef7.png?q=100"
+                },
+                {
+                    "adjustment_type": "CASHBACK_ON_CARD",
+                    "adjustment_id": "FPO250619134128USHPF",
+                    "summary": "5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarter",
+                    "contributors": {
+                        "payment_instrument": [
+                            "CREDIT"
+                        ],
+                        "banks": [
+                            "FLIPKARTAXISBANK"
+                        ],
+                        "emi_months": [
+                            "0"
+                        ],
+                        "card_networks": []
+                    },
+                    "display_tags": [
+                        "PAYMENT_OPTIONS"
+                    ],
+                    "image": "https://img1a.flixcart.com/www/linchpin/fk-cp-pay/axis-78501b36.svg"
+                },
+                {
+                    "adjustment_type": "CASHBACK_ON_CARD",
+                    "adjustment_id": "FPO250619135528ZQIZW",
+                    "summary": "5% cashback on Axis Bank Flipkart Debit Card up to ₹750",
+                    "contributors": {
+                        "payment_instrument": [
+                            "CREDIT"
+                        ],
+                        "banks": [
+                            "FLIPKARTAXISBANK"
+                        ],
+                        "emi_months": [
+                            "0"
+                        ],
+                        "card_networks": []
+                    },
+                    "display_tags": [
+                        "PAYMENT_OPTIONS"
+                    ],
+                    "image": "https://img1a.flixcart.com/www/linchpin/fk-cp-pay/axis-78501b36.svg"
+                },
+                {
+                    "adjustment_type": "INSTANT_DISCOUNT",
+                    "adjustment_id": "FPO250623124446V4JXT",
+                    "summary": "No Cost EMI on Bajaj Finserv EMI Card",
+                    "contributors": {
+                        "payment_instrument": [
+                            "EMI_OPTIONS"
+                        ],
+                        "banks": [
+                            "BAJAJFINSERV"
+                        ],
+                        "emi_months": [
+                            "3"
+                        ],
+                        "card_networks": []
+                    },
+                    "display_tags": [
+                        "PAYMENT_OPTIONS"
+                    ],
+                    "image": "https://static-assets-web.flixcart.com/apex-static/images/payments/banks/BFL_V2.svg"
+                }
+            ]
+        }
+    },
+    "merchant_id": "mp_flipkart",
+    "section_details": {
+        "PREFERRED": {
+            "visible_options_count": 3
+        },
+        "OTHERS": {
+            "visible_options_count": 10
+        },
+        "NEW_VOUCHERS": {
+            "visible_options_count": 1
+        },
+        "LINKED_VOUCHERS": {
+            "visible_options_count": 1
+        }
+    }
+}
