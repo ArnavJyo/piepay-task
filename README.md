@@ -1,4 +1,4 @@
-# Flipkart Offers API Assignment
+# PiePay Assignment
 
 ## 1. Setup Instructions
 
