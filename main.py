@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 import re
+from sqlalchemy import or_
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///offers.db'
@@ -84,7 +85,9 @@ def highest_discount():
 
     offers_query = Offer.query
     if bank_name:
-        offers_query = offers_query.filter(Offer.banks.ilike(f'%{bank_name}%'))
+        offers_query = offers_query.filter(
+            or_(Offer.banks.ilike(f'%{bank_name}%'), Offer.banks == '')
+        )
     if payment_instrument:
         offers_query = offers_query.filter(Offer.payment_instruments.ilike(f'%{payment_instrument}%'))
     offers = offers_query.all()
